@@ -1,0 +1,110 @@
+Start with some premade accounts
+display a menu on the CLI to the user that gives the user options to either:
+1. View Account
+2. Deposit
+3. Withdraw
+4. Transfer
+5. Transaction History
+6. Bank Statistics
+7. Exit
+
+Option 1 should return a formatted view of the account information
+Option 2 should prompt the user for the amount being deposited,
+    then add that to the balance and return the new balance.
+    After adding to the balance, add the transaction to a log
+Option 3 should prompt the user for withdraw amount, then print
+    the new balance. 
+    edge case: if the withdraw amount would result in a negative
+        balance, withdraw should be blocked
+    after performing operation, add the transaction to a log
+Option 4 should prompt the user for the amount they want to transfer
+    and the destination account to transfer, then subtract that amount
+    from their account and add it to the other user's account
+    After done, add a record of the transaction to the transactions log
+Option 5 should prompt the user for their transaction history, and 
+    return a detailed log of all deposits and withdrawals
+Option 6 should show a fixed, sanitized version of bank statistics
+
+
+//start main()
+    //while true:
+
+        accounts = {
+            "1001": {
+                "name": "Alice",
+                "balance": 1250.00,
+                "transactions": []
+            },
+            "1002": {
+                "name": "Bob",
+                "balance": 840.50,
+                "transactions": []
+            },
+            "1003": {
+                "name": "Jon",
+                "balance": 2200.00,
+                "transactions": []
+            }
+        }
+
+        //create a variable to hold a multi-line string representing a menu
+        //print the variable to the user, then prompt for input. store the input.
+            //need to get the user's name and what their menu choice is
+
+        //Initialize an if statement:
+        //If response is 1:
+            //call account info function
+        //Elif response is 2:
+            //call the deposit function
+        //Elif response is 3:
+            //call the withdrawal function
+        //Elif response is 4:
+            //call the transfer function
+        //Elif response is 5:
+            //call the function to show transaction logs
+        //Elif response is 6:
+            //display the banks public-facing information
+        //Else response is 7:
+            //break
+
+    //define a function to show account info
+    #takes dictionary as argument
+        //display the name and balance of the user's account with the name
+        # that they entered
+        
+    //define a function to deposit to account, it will need the dictionary
+        //prompt the user to enter the amount they want deposited.
+            //check to make sure the input is a float
+        //add input to balance
+        //append "deposited float into account" into transaction log
+        //print new balance
+
+    //define a function to withdraw from account, will need dictionary as parameter
+        //prompt the user to enter withdrawal amount
+        //check to make sure withdrawal amount is float
+        //if balance - amount is >= 0:
+            //subtract amount from balance
+        //append description to transactions log
+        //print new balance and confirmation of withdrawal (take money)
+        
+    //define a function to transfer amount between accounts, needs dictionary as parameter
+        //prompt the user for the amount the transfer and who to transfer to
+        //store those in different variables
+        //ensure amount is a float
+        //if balance - amount >= 0:
+            //if destination is in dictionary:
+                //subtract amount from balance
+                //add amount to destination balance
+                //print confirmation statement
+        //append a description to transaction list for both users
+        //print new balance for user account
+
+    //define a function to show transaction logs
+        //print the transaction logs for the logged in user
+
+    //define a function to show the bank's sanitized information
+        //create information
+        //print it
+
+if __init__ == '__main__':
+    main()
